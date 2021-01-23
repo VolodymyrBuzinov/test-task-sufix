@@ -1,0 +1,182 @@
+body {
+  background-color: $main-color;
+  font-family: 'Open Sans', sans-serif;
+  color: $text-color;
+}
+.header {
+  @media screen and (min-width: 320px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
+  &-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    @media screen and (max-width: 479px) {
+      max-width: 450px;
+    }
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 1280px;
+    }
+  }
+  &-logo {
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 62px;
+    }
+  }
+  &-language {
+    text-align: center;
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 1280px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 34px;
+    }
+  }
+  &-contacts {
+    @media screen and (min-width: 320px) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+    @media screen and (max-width: 767px) {
+      margin-bottom: 20px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-right: 62px;
+    }
+    &__inner__text {
+      @extend %text-throw;
+      color: $hover-color;
+      font-size: 13px;
+      @media screen and (min-width: 768px) {
+        display: inline-block;
+      }
+    }
+    &__icon {
+      margin-right: 20px;
+    }
+  }
+}
+.phone-select {
+  font-weight: 700;
+  font-size: 21px;
+}
+.phone-select,
+.language-select,
+.production-select {
+  background-color: $main-color;
+  color: $text-color;
+  border: none;
+  outline: none;
+  transition: $animation-timing;
+  text-align: center;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+  }
+}
+.header-info__container {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.header-nav {
+  margin-left: auto;
+  margin-right: auto;
+  &__list {
+    @extend %list-throw;
+    display: grid;
+    @media screen and (min-width: 320px) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+    }
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(6, 1fr);
+      grid-gap: 10px;
+    }
+    @media screen and (min-width: 1280px) {
+      grid-gap: 30px;
+    }
+  }
+  &__link {
+    @extend %link-style;
+    @media screen and (min-width: 320px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 20px;
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    color: $text-color;
+    transition: color $animation-timing, fill $animation-timing;
+    @media screen and (min-width: 320px) {
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    &:hover,
+    &:focus {
+      color: $hover-color;
+      fill: $hover-color;
+    }
+    & span {
+      margin-right: 5px;
+      @media screen and (min-width: 1280px) {
+        display: none;
+      }
+    }
+  }
+  &__icon {
+    width: 21px;
+    height: 17px;
+    fill: $text-color;
+    transition: fill $animation-timing;
+    &:hover,
+    &:focus {
+      fill: $hover-color;
+    }
+  }
+  &__icon__arrow {
+    width: 20px;
+    height: 20px;
+    fill: $text-color;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

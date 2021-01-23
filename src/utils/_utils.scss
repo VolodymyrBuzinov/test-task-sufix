@@ -1,0 +1,36 @@
+$main-color: #000000;
+$hover-color: #b32a22;
+$button-color: #e6362c;
+$text-color: #ffffff;
+$animation-timing: 0.4s ease-in-out;
+
+%text-throw {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+%list-throw {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+%link-style {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: $text-color;
+  transition: color $animation-timing, fill $animation-timing;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: $hover-color;
+    fill: $hover-color;
+  }
+}
+%img-style {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
