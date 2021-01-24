@@ -30,7 +30,7 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 1280px;
+      min-width: 1280px;
     }
   }
   &-logo {
@@ -70,7 +70,7 @@ body {
     &__inner__text {
       @extend %text-throw;
       color: $hover-color;
-      font-size: 13px;
+      font-size: 10px;
       @media screen and (min-width: 768px) {
         display: inline-block;
       }
@@ -82,7 +82,7 @@ body {
 }
 .phone-select {
   font-weight: 700;
-  font-size: 21px;
+  font-size: 16px;
 }
 .phone-select,
 .language-select,
@@ -126,18 +126,27 @@ body {
   }
   &__link {
     @extend %link-style;
+    text-transform: uppercase;
     @media screen and (min-width: 320px) {
       padding-top: 10px;
       padding-bottom: 10px;
+      font-size: 12px;
     }
     @media screen and (min-width: 1280px) {
-      font-size: 20px;
+      font-size: 12px;
+    }
+
+    &:hover {
+      .header-nav__icon__arrow {
+        fill: $hover-color;
+      }
     }
   }
   &__button {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-transform: uppercase;
     outline: none;
     border: none;
     background-color: transparent;
@@ -146,11 +155,14 @@ body {
     @media screen and (min-width: 320px) {
       padding-top: 10px;
       padding-bottom: 10px;
+      font-size: 12px;
     }
     &:hover,
     &:focus {
+      .header-nav__icon {
+        fill: $hover-color;
+      }
       color: $hover-color;
-      fill: $hover-color;
     }
     & span {
       margin-right: 5px;
@@ -164,15 +176,12 @@ body {
     height: 17px;
     fill: $text-color;
     transition: fill $animation-timing;
-    &:hover,
-    &:focus {
-      fill: $hover-color;
-    }
   }
   &__icon__arrow {
     width: 20px;
     height: 20px;
     fill: $text-color;
+    transition: fill $animation-timing;
   }
   &__item {
     display: flex;

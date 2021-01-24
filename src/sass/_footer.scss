@@ -1,0 +1,103 @@
+.footer {
+  @media screen and (max-width: 767px) {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+  @media screen and (min-width: 768px) {
+    padding-top: 75px;
+    padding-bottom: 75px;
+  }
+  &-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    @media screen and (max-width: 479px) {
+      max-width: 450px;
+    }
+    @media screen and (min-width: 480px) {
+      width: 480px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 768px;
+    }
+    @media screen and (min-width: 1280px) {
+      min-width: 1280px;
+    }
+  }
+  &-logo {
+    @media screen and (min-width: 320px) {
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+  }
+  &-list {
+    @extend %list-throw;
+    display: grid;
+    @media screen and (min-width: 320px) {
+      grid-gap: 15px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 768px) {
+      grid-gap: 30px;
+      grid-template-columns: repeat(6, 1fr);
+      margin-bottom: 30px;
+    }
+  }
+  &-list__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-list__link {
+    @extend %link-style;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+    color: #4d4d4d;
+    line-height: 1.14;
+    @media screen and (min-width: 320px) {
+      font-size: 14px;
+    }
+  }
+  &-social {
+    @extend %list-throw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @media screen and (min-width: 320px) {
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 30px;
+    }
+    &__icon {
+      fill: $text-color;
+      transition: fill $animation-timing;
+      cursor: pointer;
+      &:hover,
+      &:focus {
+        fill: $hover-color;
+      }
+    }
+  }
+  &-copyright {
+    @extend %text-throw;
+    color: #4d4d4d;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+.facebook {
+  width: 22px;
+  height: 17px;
+  margin-right: 14px;
+}
+.youtube {
+  width: 30px;
+  height: 25px;
+}

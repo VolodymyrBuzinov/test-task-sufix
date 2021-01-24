@@ -1,0 +1,165 @@
+.slider {
+  position: relative;
+  &-container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    border-bottom: 2px solid grey;
+    @media screen and (min-width: 320px) {
+      padding-bottom: 45px;
+    }
+    @media screen and (min-width: 768px) {
+      padding-bottom: 75px;
+    }
+    &__list {
+      @extend %list-throw;
+    }
+  }
+  &-background {
+    display: block;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  &-info__container {
+    position: absolute;
+    z-index: 10;
+    @media screen and (min-width: 320px) {
+      top: 0;
+      left: 0;
+      right: 0;
+      text-align: center;
+    }
+    @media screen and (min-width: 480px) {
+      top: 50px;
+      width: 471px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    @media screen and (min-width: 1280px) {
+      top: 100px;
+      right: 60px;
+      width: 40%;
+      margin-left: auto;
+      margin-right: unset;
+      text-align: left;
+    }
+  }
+  &-title {
+    @extend %text-throw;
+    text-transform: uppercase;
+    line-height: 1.1;
+    @media screen and (min-width: 320px) {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+    @media screen and (min-width: 480px) {
+      font-size: 35px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 69px;
+      margin-bottom: 30px;
+    }
+    & span {
+      line-height: 1.67;
+      @media screen and (min-width: 320px) {
+        font-size: 14px;
+      }
+      @media screen and (min-width: 480px) {
+        font-size: 20px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 37px;
+      }
+    }
+  }
+  &-info {
+    @extend %text-throw;
+    line-height: 1.67;
+    @media screen and (min-width: 320px) {
+      font-size: 10px;
+      margin-bottom: 15px;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    @media screen and (min-width: 480px) {
+      font-size: 15px;
+    }
+    @media screen and (min-width: 1280px) {
+      font-size: 19px;
+      margin-bottom: 30px;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  &-button {
+    @extend %button-style;
+    @media screen and (max-width: 767px) {
+      font-size: 10px;
+      padding: 10px 15px;
+    }
+  }
+}
+.slider-advantages {
+  &__list {
+    @extend %list-throw;
+    display: grid;
+    text-align: center;
+    @media screen and (min-width: 320px) {
+      grid-gap: 10px;
+      grid-template-columns: 1fr;
+    }
+    @media screen and (min-width: 480px) {
+      grid-gap: 10px;
+      grid-template-columns: 1fr 1fr;
+    }
+    @media screen and (min-width: 1280px) {
+      grid-gap: 90px;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+  &__item {
+    width: 214px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @media screen and (min-width: 320px) {
+      //   font-size: 10px;
+    }
+    & img {
+      @media screen and (min-width: 1280px) {
+        margin-bottom: 22px;
+      }
+    }
+    & h3 {
+      @extend %text-throw;
+      line-height: 1.16;
+      text-transform: uppercase;
+      @media screen and (min-width: 320px) {
+        font-size: 17px;
+        margin-bottom: 10px;
+      }
+
+      @media screen and (min-width: 1280px) {
+        font-size: 25px;
+        margin-bottom: 22px;
+      }
+    }
+    & p {
+      @extend %text-throw;
+      line-height: 1.16;
+      @media screen and (min-width: 320px) {
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+      @media screen and (min-width: 1280px) {
+        font-size: 19px;
+      }
+    }
+  }
+}
