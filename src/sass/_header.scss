@@ -189,3 +189,49 @@ body {
     justify-content: center;
   }
 }
+.header-nav__link span {
+  pointer-events: none;
+}
+.button-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  border: none;
+  background-color: $button-color;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 400;
+  cursor: pointer;
+  opacity: 0;
+  transition: background-color $animation-timing, opacity $animation-timing;
+  @media screen and (max-width: 767px) {
+    bottom: 20px;
+    right: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    bottom: 52px;
+    right: 52px;
+  }
+  &:hover {
+    background-color: $text-color;
+    .button-up__icon {
+      fill: $button-color;
+    }
+  }
+  &__icon {
+    width: 43px;
+    height: 43px;
+    fill: $text-color;
+    transition: fill $animation-timing;
+    pointer-events: none;
+    @media screen and (max-width: 767px) {
+      width: 23px;
+      height: 23px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 43px;
+      height: 43px;
+    }
+  }
+}

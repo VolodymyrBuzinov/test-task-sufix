@@ -34,6 +34,7 @@
     "sass": "^1.26.9"
   },
   "dependencies": {
+    "@splidejs/splide": "^2.4.21",
     "debounce": "^1.2.0",
     "handlebars": "^4.7.6",
     "jquery": "^3.5.1",
