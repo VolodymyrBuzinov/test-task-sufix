@@ -3,12 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://VolodymyrBuzinov.github.io/resume",
+  "homepage": "https://VolodymyrBuzinov.github.io/test-task-sufix",
   "scripts": {
     "dev": "parcel src/*.html",
     "prebuild": "babel src -d lib",
     "build": "parcel build src/*.html",
-    "predeploy": "npm run build -- --public-url=/resume/",
+    "predeploy": "npm run build -- --public-url=/test-task-sufix/",
     "deploy": "gh-pages -d dist"
   },
   "repository": {
